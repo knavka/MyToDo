@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 
 export default class CurrentTask extends Component {
@@ -9,13 +8,6 @@ export default class CurrentTask extends Component {
     this.handleSave=this.handleSave.bind(this);
     this.handleClose=this.handleClose.bind(this);
   }
-  static propTypes = {
-    save: PropTypes.func.isRequired,
-    close: PropTypes.func.isRequired
-  }
-
-
-
 
 
   handleSave = () => {

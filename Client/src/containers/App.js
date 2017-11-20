@@ -11,9 +11,9 @@ import * as TasksActions from '../actions'
 const App = ({tasks, bloks, currentTask, actions}) => (
  
   <div className='appmap'>
-    <NewTask open={actions.openTask} clearEditor={actions.clearEditor}/>
+    <NewTask open={actions.openEditor} clearEditor={actions.clearEditor}/>
     <TaskCreater isOpen={bloks.taskEditor.open} taskProps={currentTask} save={actions.saveTask} close={actions.closeTaskEditor} setProp={actions.setProp}/>
-    <Tasks taskslist={tasks} openEditior={actions.openEditor} openTask={actions.openTask} deleteTask={actions.deleteTask}/>
+    <Tasks loadTasks={actions.loadTasks} taskslist={tasks} openEditior={actions.openEditor} openTask={actions.openTask} deleteTask={actions.deleteTask}/>
 
   </div>
 )

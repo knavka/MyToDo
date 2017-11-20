@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {SERVICES} from '../constants/Services'
-
 
  export default class ServiceTask extends Component {
   constructor() {

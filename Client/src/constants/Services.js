@@ -1,7 +1,7 @@
 
 
-import iconElectrician from '../img/icons/noun_321315_cc.svg'
-import iconPlumber from '../img/icons/noun_321339_cc.svg'
+import iconPlumber from '../img/icons/noun_321315_cc.svg'
+import iconElectrician from '../img/icons/noun_321339_cc.svg'
 import iconGardener from '../img/icons/noun_321363_cc.svg'
 import iconHouseKeeper from '../img/icons/noun_321395_cc.svg'
 import iconCook from '../img/icons/noun_321399_cc.svg'

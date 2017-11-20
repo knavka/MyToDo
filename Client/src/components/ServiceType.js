@@ -1,31 +1,16 @@
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {SERVICES} from '../constants/Services'
-// import iconElectrician from '../img/icons/noun_321315_cc.svg'
-// import iconPlumber from '../img/icons/noun_321339_cc.svg'
-// import iconGardener from '../img/icons/noun_321363_cc.svg'
-// import iconHouseKeeper from '../img/icons/noun_321395_cc.svg'
-// import iconCook from '../img/icons/noun_321399_cc.svg'
 
  export default class ServiceType extends Component {
   constructor() {
    super();
   this.services=SERVICES;
-  // this.types={
-  //   'Electrician':{'icon':iconElectrician},
-  //   'Plumber':{'icon':iconPlumber},
-  //   'Gardener':{'icon':iconGardener},
-  //   'HouseKeeper':{'icon':iconHouseKeeper},
-  //   'Cook':{'icon':iconCook}
-  // }
   for (let key in this.services){
     let handleOnClick=()=>this.props.setProp('serviceType', key);
     handleOnClick=handleOnClick.bind(this);
     this.services[key].handleOnClick=handleOnClick;
- 
-  }
-
+   }
   }
 
   render() {

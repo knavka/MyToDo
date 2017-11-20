@@ -1,6 +1,5 @@
 import styles from "./NewTask.css";
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 export default class NewTask extends Component {
     constructor(){
@@ -8,18 +7,11 @@ export default class NewTask extends Component {
     this.handleClick=this.handleClick.bind(this);
 
   }
-  static propTypes = {
-    open: PropTypes.func.isRequired,
-    clearEditor: PropTypes.func.isRequired
-  }
 
   handleClick = () => {
     this.props.clearEditor();
-
-    this.props.open()
+    this.props.open();
   }
-
-
 
   render() {
     return (

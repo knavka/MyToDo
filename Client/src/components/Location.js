@@ -1,7 +1,5 @@
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
 
 
  export default class Location extends Component {
@@ -9,8 +7,6 @@ import PropTypes from 'prop-types'
     super();
     this.handleOnChange=this.handleOnChange.bind(this);
   }
-
-
 
   handleOnChange(e) {
     this.props.setProp('location', e.target.value);

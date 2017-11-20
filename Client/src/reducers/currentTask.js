@@ -6,7 +6,7 @@ const initialCurrentTask ={
  serviceType: '',
  serviceTask: '',
  description: '',
- date: Date.now()
+ date: ''
   }
 
 export default function currentTask(state = initialCurrentTask, action) {

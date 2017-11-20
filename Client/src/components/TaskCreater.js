@@ -1,9 +1,5 @@
-
-
-
 import styles from "./TaskCreater.css";
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import CurrentTask from './CurrentTask'
 import Location from './Location'
 import ServiceType from './ServiceType'
@@ -11,9 +7,10 @@ import ServiceTask from './ServiceTask'
 import Description from './Description'
 
 export default class TaskCreater extends Component {
-  static propTypes = {
-    save: PropTypes.func.isRequired,
-    close: PropTypes.func.isRequired
+  constructor(){
+    super();
+    this.handleSave=this.handleSave.bind(this);
+    this.handleClose=this.handleClose.bind(this);
   }
 
   handleSave = () => {

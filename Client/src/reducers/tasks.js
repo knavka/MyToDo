@@ -1,27 +1,32 @@
 
-import { SAVE_TASK, DELETE_TASK} from '../constants/ActionTypes'
-//ADD_TASK, EDIT_TASK,
-const initialTasks = []
-// {
-//  id:0,
-//  location: '',
-//  serviceType: '',
-//  serviceTask: '',
-//  description: '',
-//  date: Date.now(),
-//   }
-// ]
+import { SAVE_TASK, DELETE_TASK, LOAD_TASKS} from '../constants/ActionTypes'
+import { getTasksFromServer } from '../serveractions/ServerActions'
+import { postTaskToServer,deleteTaskFromServer } from '../serveractions/ServerActions'
+     
+
+const initialTasks = [];
+
 
 export default function tasks(state = initialTasks, action) {
+
+
   switch (action.type) {
 
+    case LOAD_TASKS: {
+      return [...state,...action.tasks];
+    }
+
     case DELETE_TASK:
+    deleteTaskFromServer(action.id);
       return state.filter(task =>
         task.id !== action.id
       )
 
     case SAVE_TASK:{
-    if (action.id)
+
+
+    if (action.id){
+      postTaskToServer(action.id,action.props);
       return state.map(task =>
         task.id === action.id ?
           { ...task, 
@@ -33,11 +38,14 @@ export default function tasks(state = initialTasks, action) {
           } :
           task
       )
-    else
+    }
+    else{
+      const id=Date.now();
+       postTaskToServer(id,action.props);
        return [
         ...state,
         {
-          id: state.reduce((maxId, task) => Math.max(task.id, maxId), -1) + 1,
+          id: id,
           location: action.props.location,
           serviceType: action.props.serviceType,
           serviceTask: action.props.serviceTask,
@@ -48,9 +56,8 @@ export default function tasks(state = initialTasks, action) {
       ]
     }
 
+    }
 
-
-   
     default:
       return state
   }

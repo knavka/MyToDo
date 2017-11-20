@@ -1,12 +1,10 @@
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 
 export default class Task extends Component {
   constructor(){
     super();
-    console.log(this.props);
     this.handleEdit=this.handleEdit.bind(this);
     this.handleDelete=this.handleDelete.bind(this);
   }
