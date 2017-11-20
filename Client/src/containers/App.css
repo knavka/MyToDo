@@ -1,0 +1,21 @@
+.flex-col {
+	display:flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display:flex;
+	flex-direction: row;
+}
+
+.appmap {
+	width:100vw;
+	height:100vh;
+	background:url(../img/map_bg.png);
+	margin: 0;
+	border: 1px solid white;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+
+

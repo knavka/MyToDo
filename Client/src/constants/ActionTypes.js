@@ -1,0 +1,8 @@
+export const SAVE_TASK = 'SAVE_TASK'
+export const DELETE_TASK = 'DELETE_TASK'
+export const OPEN_TASK = 'OPEN_TASK'
+export const CLOSE_TASK_CREATER = 'CLOSE_TASK_CREATER'
+export const SET_PROP = 'SET_PROP'
+export const CLEAR_CURRENT_TASK = 'CLEAR_CURRENT_TASK'
+export const OPEN_TASK_CREATER = 'OPEN_TASK_CREATER'
+export const SET_CURRENT_TASK = 'SET_CURRENT_TASK'

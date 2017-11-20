@@ -1,0 +1,163 @@
+
+
+.appmap-TaskCreater-block {
+ 	position: fixed;
+	top:20px;
+	right:20px;
+	width:400px;
+	height:1000px;
+	margin:10px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	justify-content: flex-start;
+	border:1px solid #f2f2f2;
+
+
+}
+
+
+.appmap-CurrentTask-block {
+	width:100%;
+	background-color: #f2f2f2;
+	border:1px solid #f2f2f2;
+
+}
+
+
+.appmap-TaskCreater-block .appmap-container-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.appmap-TaskCreater-block .appmap-container-left{
+	display: flex;
+	justify-content: left;
+
+}
+
+.appmap-TaskCreater-block .appmap-block-title {
+color:lightgrey;
+font-size: 12px;
+margin: 10px 5px;
+}
+
+
+.appmap-TaskCreater-block .appmap-button {
+border-radius: 2px;
+font-size: 14px;
+padding:2px 5px;
+margin:5px;
+}
+
+.appmap-TaskCreater-block .appmap-button:hover {
+box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.appmap-TaskCreater-block .appmap-button:active {
+box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.appmap-TaskCreater-block .appmap-strokeBut {
+color:#4a71fe;
+}
+
+.appmap-TaskCreater-block .appmap-fillBut {
+background-color:#4a71fe;
+color:#ffffff;
+}
+
+.appmap-TaskCreater-block .appmap-CurrentTask-descr{
+margin: 10px 5px ;
+font-size: 18px;
+font-weight: bold;
+}
+
+.appmap-TaskCreater-block .appmap-CurrentTask-location {
+margin: 10px 5px;
+font-size: 12px;
+}
+
+
+.appmap-TaskCreater-block .appmap-props-block {
+border:1px solid #f2f2f2;
+width:100%;
+background-color: #ffffff;
+border:1px solid #f2f2f2;
+}
+
+
+.appmap-TaskCreater-block .appmap-input {
+border:0px;
+line-height: 30px;
+vertical-align: middle;
+padding: 5px;
+font-size: 14px;
+font-weight: bold;
+}
+
+.appmap-TaskCreater-block .appmap-type-container{
+justify-content: center;
+align-items: center;
+margin:4px;
+}
+
+.appmap-TaskCreater-block .appmap-icon-container {
+width: 70px;
+height: 70px;
+justify-content: center;
+align-items: center;
+border-radius: 70px
+}
+
+.appmap-TaskCreater-block .appmap-icon-container:hover {
+border:1px solid #4a71fe;
+}
+
+.appmap-TaskCreater-block .appmap-icon-container:active, .appmap-TaskCreater-block .appmap-icon-container.choosen {
+border:1px solid #4a71fe;
+}
+
+
+.appmap-TaskCreater-block .appmap-icon {
+width: 50px;
+height: 50px;
+}
+
+.appmap-TaskCreater-block .appmap-icon-title {
+margin: 5px auto;
+font-size: 12px;
+font-weight:bold;
+}
+
+.appmap-TaskCreater-block  .appmap-icons-container {
+justify-content: space-between;
+}
+
+.appmap-TaskCreater-block .appmap-tasks-container {
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.appmap-TaskCreater-block .appmap-task-container {
+padding:5px;
+margin:5px;
+border-radius: 20px;
+}
+
+.appmap-TaskCreater-block .appmap-task-title {
+margin: 5px auto;
+font-size: 13px;
+font-weight:bold;
+ white-space: nowrap;
+}
+
+.appmap-TaskCreater-block .appmap-task-container:hover {
+border:1px solid #4a71fe;
+}
+
+.appmap-TaskCreater-block .appmap-task-container:active, .appmap-TaskCreater-block .appmap-task-container.choosen {
+border:1px solid #4a71fe;
+}
+

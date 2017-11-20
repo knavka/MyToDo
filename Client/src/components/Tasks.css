@@ -1,0 +1,59 @@
+
+
+.appmap-Tasks-block {
+ 	position: fixed;
+	top:80px;
+	left:20px;
+	width:200px;
+	margin:10px;
+	justify-content: start;
+}
+
+
+.appmap-Tasks-block .appmap-Task-block {
+ 	width:200px;
+	margin: 5px 0;
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.appmap-Tasks-block  .appmap-block-title {
+color:lightgrey;
+font-size: 12px;
+margin: 10px 5px;
+}
+
+
+.appmap-Tasks-block .appmap-Task-descr{
+margin: 10px 5px ;
+font-size: 14px;
+font-weight: bold;
+}
+
+
+.appmap-Tasks-block .appmap-button {
+border-radius: 2px;
+font-size: 14px;
+padding:2px 5px;
+margin:5px;
+}
+
+.appmap-Tasks-block .appmap-button:hover {
+box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.appmap-Tasks-block .appmap-button:active {
+box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.appmap-Tasks-block .appmap-strokeBut {
+color:#4a71fe;
+}
+
+.appmap-Tasks-block .appmap-fillBut {
+background-color:#4a71fe;
+color:#ffffff;
+}
