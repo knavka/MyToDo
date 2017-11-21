@@ -1,8 +1,8 @@
-import styles from "./NewTask.css";
+import styles from "../styles/NewTask.css";
 import React, { Component } from 'react'
 
 export default class NewTask extends Component {
-    constructor(){
+  constructor(){
     super();
     this.handleClick=this.handleClick.bind(this);
 
@@ -22,10 +22,10 @@ export default class NewTask extends Component {
       </div>
       </div>
       </div>)
-  }
+    }
 
   }
-    
 
-    
+
+
 

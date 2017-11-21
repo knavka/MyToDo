@@ -8,3 +8,4 @@ export const setProp = (propName, propVal) => ({ type: types.SET_PROP, propName:
 export const clearEditor = () => ({ type: types.CLEAR_CURRENT_TASK });
 export const openEditor = () => ({ type: types.OPEN_TASK_CREATER});
 export const loadTasks = (tasks) => ({ type: types.LOAD_TASKS, tasks:tasks});
+export const errorSave = (fields) => ({ type: types.ERROR_TASK_CREATER, fields:fields});

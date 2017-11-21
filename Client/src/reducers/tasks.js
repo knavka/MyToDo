@@ -1,6 +1,5 @@
 
 import { SAVE_TASK, DELETE_TASK, LOAD_TASKS} from '../constants/ActionTypes'
-import { getTasksFromServer } from '../serveractions/ServerActions'
 import { postTaskToServer,deleteTaskFromServer } from '../serveractions/ServerActions'
      
 
@@ -23,9 +22,9 @@ export default function tasks(state = initialTasks, action) {
       )
 
     case SAVE_TASK:{
-
-
     if (action.id){
+      const date=Date.now();
+      action.props.date=date;
       postTaskToServer(action.id,action.props);
       return state.map(task =>
         task.id === action.id ?
@@ -34,14 +33,16 @@ export default function tasks(state = initialTasks, action) {
           serviceType: action.props.serviceType,
           serviceTask: action.props.serviceTask,
           description: action.props.description,
-          date: Date.now()
+          date: date
           } :
           task
       )
     }
     else{
       const id=Date.now();
-       postTaskToServer(id,action.props);
+      const date=Date.now();
+      action.props.date=date;
+      postTaskToServer(id,action.props);
        return [
         ...state,
         {
@@ -50,7 +51,7 @@ export default function tasks(state = initialTasks, action) {
           serviceType: action.props.serviceType,
           serviceTask: action.props.serviceTask,
           description: action.props.description,
-          date: Date.now()
+          date: date
 
         }
       ]

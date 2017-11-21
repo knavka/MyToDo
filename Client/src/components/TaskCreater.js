@@ -1,4 +1,4 @@
-import styles from "./TaskCreater.css";
+import styles from "../styles/TaskCreater.css";
 import React, { Component } from 'react'
 import CurrentTask from './CurrentTask'
 import Location from './Location'
@@ -11,17 +11,17 @@ export default class TaskCreater extends Component {
     super();
     this.handleSave=this.handleSave.bind(this);
     this.handleClose=this.handleClose.bind(this);
-  }
+}
 
-  handleSave = () => {
+handleSave = () => {
     this.props.save()
-  }
-  handleClose = () => {
+}
+handleClose = () => {
     this.props.close()
-  }
+}
 
 
-  render() {
+render() {
     const  isOpen = this.props.isOpen;
     if (isOpen)
       return (
@@ -36,16 +36,20 @@ export default class TaskCreater extends Component {
         save={this.props.save} 
         close={this.props.close}
         setProp={this.props.setProp}  
+        setError={this.props.setError} 
+        errorFields={this.props.errorFields}
         />
 
         <Location 
         location={this.props.taskProps.location}
         setProp={this.props.setProp} 
+        setError={this.props.setError} 
         />
 
         <ServiceType 
         serviceType={this.props.taskProps.serviceType}
         setProp={this.props.setProp}  
+        setError={this.props.setError} 
         />
 
         <ServiceTask 
@@ -61,13 +65,13 @@ export default class TaskCreater extends Component {
 
 
 
-  
+        
         </div>
         )
 
-    else 
+  else 
       return null
-  }
+}
 }
 
 

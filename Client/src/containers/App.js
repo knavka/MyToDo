@@ -1,4 +1,4 @@
-import styles from "./App.css";
+import styles from "../styles/App.css";
 import React from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
@@ -9,14 +9,14 @@ import Tasks from '../components/Tasks'
 import * as TasksActions from '../actions'
 
 const App = ({tasks, bloks, currentTask, actions}) => (
- 
+
   <div className='appmap'>
-    <NewTask open={actions.openEditor} clearEditor={actions.clearEditor}/>
-    <TaskCreater isOpen={bloks.taskEditor.open} taskProps={currentTask} save={actions.saveTask} close={actions.closeTaskEditor} setProp={actions.setProp}/>
-    <Tasks loadTasks={actions.loadTasks} taskslist={tasks} openEditior={actions.openEditor} openTask={actions.openTask} deleteTask={actions.deleteTask}/>
+  <NewTask open={actions.openEditor} clearEditor={actions.clearEditor}/>
+  <TaskCreater isOpen={bloks.taskEditor} errorFields={bloks.errorFields} setError={actions.errorSave} taskProps={currentTask} save={actions.saveTask} close={actions.closeTaskEditor} setProp={actions.setProp}/>
+  <Tasks loadTasks={actions.loadTasks} taskslist={tasks} openEditior={actions.openEditor} openTask={actions.openTask} deleteTask={actions.deleteTask}/>
 
   </div>
-)
+  )
 App.propTypes = {
   tasks: PropTypes.array.isRequired,
   currentTask:PropTypes.object.isRequired,
@@ -32,10 +32,10 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(TasksActions, dispatch)
+  actions: bindActionCreators(TasksActions, dispatch)
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+  )(App)
